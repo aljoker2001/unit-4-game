@@ -1,19 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">    
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Sniglet:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/animations.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body>
-    
 
-    <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
+<body background="assets/images/daniel-straub-637293-unsplash.jpg">
+    <header>
+        <h1 class="jello">Crystal Collector</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="row crystals">
+                    <div class="col-6">
+                        <img src="assets/images/blueCrystal.jpg" alt="Blue Crystal">
+                    </div>
+                    <div class="col-6">
+                        <img src="assets/images/purpleCrystal.jpg" alt="Purple Crystal">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <img src="assets/images/titaniumCrystal.jpg" alt="Titanium Crystal">
+                    </div>
+                    <div class="col-6">
+                        <img src="assets/images/greenCrystal.jpg" alt="Green Crystal">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magni quod a nam maxime odio quis vel optio! Unde, veritatis vero! Rerum voluptatum adipisci dolor veritatis voluptates fugit hic sit.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <p id="match">Score to Match: </p>
+                    </div>
+                    <div class="col-6">
+                        <p id="win">Wins: </p>
+                        <p id="loss">Losses: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row score">
+            <p>Total Score: </p>
+            <p id="total">0</p>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>

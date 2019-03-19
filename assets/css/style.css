@@ -1,0 +1,63 @@
+body {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Sniglet', cursive;
+    font-size: 70px;
+    text-align: center;
+    padding: 20px;
+    color: blueviolet;
+    -webkit-text-stroke: 1px black;
+}
+
+img {
+    width: 100%;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    border: 1px solid red;
+}
+
+.row {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.col {
+    width: auto;
+    border: 1px solid red;
+}
+
+.col-4 {
+    width: 33.333%;
+    border: 1px solid red;
+}
+
+.col-9 {
+    width: 66.666%;
+    border: 1px solid red;
+}
+
+.col-6 {
+    width: 50%;
+    border: 1px solid red;
+}
+
+.crystals {
+    display: grid;
+
+}
+
+.score {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    padding: 20px;
+}
