@@ -40,7 +40,8 @@
             <div class="col-4 records text-white pl-0">
                 <div class="row" id="instructions">
                     <div class="col bg-secondary">
-                        <p class="my-3 mr-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magni quod a nam maxime odio quis vel optio! Unde, veritatis vero! Rerum voluptatum adipisci dolor veritatis voluptates fugit hic sit.</p>
+                        <h3>Instructions</h3>
+                        <p class="my-3 mr-3">At the beginning of each game, you are given a number below.  Each crystal to the left is worth a certain amount of points.  Click on a combination of the crystals to match the below number exactly.  If you win, you're awesome.  If you lose, you're a dumb dumb.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -64,7 +65,9 @@
         </div>
     </div>
 
-
+    <audio id="sound" src="assets/sounds/crystal.mp3" type="audio/mpeg"></audio>
+    <audio id="winSound" src="assets/sounds/tada.mp3" type="audio/mpeg"></audio>
+    <audio id="loseSound" src="assets/sounds/sad.mp3" type="audio/mpeg"></audio>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>

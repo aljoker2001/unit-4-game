@@ -7,6 +7,9 @@ var total = 0;
 var wins = 0;
 var losses = 0;
 var button = $("<button>");
+var crystal = document.getElementById("sound");
+var winSound = document.getElementById("winSound");
+var loseSound = document.getElementById("loseSound");
 
 
 const randomNumbers = () => {
@@ -32,6 +35,7 @@ const winOrLose = () => {
         $(".playAgain").append(button);
         losses += 1;
         $("#loss").text(losses);
+        loseSound.play();
     } else if (total === match) {
         button = $("<button>");
         $("#winner").text("You Win!");
@@ -40,6 +44,7 @@ const winOrLose = () => {
         $(".playAgain").append(button);
         wins += 1;
         $("#win").text(wins);
+        winSound.play();
     }
 }
 
@@ -48,24 +53,28 @@ randomNumbers();
 $("#blue").on("click", function() {
     total += blue;
     $("#total").text(total);
+    crystal.play();
     winOrLose();
 });
 
 $("#purple").on("click", function() {
     total += purple;
     $("#total").text(total);
+    crystal.play();
     winOrLose();
 });
 
 $("#titanium").on("click", function() {
     total += titanium;
     $("#total").text(total);
+    crystal.play();
     winOrLose();
 });
 
 $("#green").on("click", function() {
     total += green;
     $("#total").text(total);
+    crystal.play();
     winOrLose();
 });
 
