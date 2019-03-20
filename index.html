@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Sniglet:800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/animations.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -37,11 +38,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4 records text-white pl-0">
+            <div class="col-6 col-md-4 records text-white pl-0">
                 <div class="row" id="instructions">
                     <div class="col bg-secondary">
                         <h3>Instructions</h3>
-                        <p class="my-3 mr-3">At the beginning of each game, you are given a number below.  Each crystal to the left is worth a certain amount of points.  Click on a combination of the crystals to match the below number exactly.  If you win, you're awesome.  If you lose, you're a dumb dumb.</p>
+                        <p class="my-3 mr-3">At the beginning of each game, you are given a number below. Each crystal
+                            to the left is worth a certain amount of points. Click on a combination of the crystals to
+                            match the below number exactly. If you win, you're awesome. If you lose, you're a dumb dumb.
+                        </p>
                     </div>
                 </div>
                 <div class="row">
@@ -60,8 +64,10 @@
         <div class="d-flex justify-content-center" id="loser"></div>
         <div class="playAgain d-flex justify-content-center"></div>
         <div class="row score d-flex justify-content-center">
-            <p>Total Score: </p>
-            <p id="total">0</p>
+            <div class="col-6 col-md-12">
+                <p>Total Score: </p>
+                <p id="total">0</p>
+            </div>
         </div>
     </div>
 
