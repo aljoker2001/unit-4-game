@@ -1,6 +1,8 @@
-body {
+/* body {
     box-sizing: border-box;
-}
+    background-repeat: no-repeat;
+    background-size: 100%;
+} */
 
 h1 {
     font-family: 'Sniglet', cursive;
@@ -12,45 +14,45 @@ h1 {
 }
 
 img {
-    width: 100%;
-    margin: 20px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #6c757d;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    width: auto;
-    border: 1px solid red;
+p {
+    opacity: 1;
+}
+
+.btn {
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.btn:active, .btn-primary:active {
+    background-color: rgb(155, 75, 230);
+}
+
+.btn:hover {
+    background-color: rgb(124, 13, 228);
+}
+
+.bg-secondary {
+    opacity: .60;
 }
 
 .row {
     width: 100%;
-    border: 1px solid red;
 }
 
-.col {
-    width: auto;
-    border: 1px solid red;
-}
-
-.col-4 {
-    width: 33.333%;
-    border: 1px solid red;
-}
-
-.col-9 {
-    width: 66.666%;
-    border: 1px solid red;
-}
-
-.col-6 {
-    width: 50%;
-    border: 1px solid red;
-}
 
 .crystals {
-    display: grid;
 
+}
+
+.records {
+    font-family: 'Baloo Chettan', cursive;
+    -webkit-text-stroke: 1px black;
+    line-height: 1.6;
 }
 
 .score {
@@ -60,4 +62,52 @@ img {
     color: white;
     -webkit-text-stroke: 1px black;
     padding: 20px;
+    flex-direction: column;
+}
+
+#instructions {
+    font-size: 24px;
+}
+
+#win, #loss, #scoreToMatch, .wins, .losses {
+    font-size: 20px;
+}
+
+#match {
+    font-size: 36px;
+}
+
+#total, #winner, #loser {
+    font-size: 40px;
+}
+
+#winner, #loser {
+    color: green;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 1rem;
+    font-family: 'Sniglet', cursive;
+}
+
+#loser {
+    color: red;
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 640px) {
+
 }

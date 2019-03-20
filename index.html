@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Sniglet:800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="assets/css/animations.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
@@ -19,42 +21,44 @@
     </header>
     <div class="container">
         <div class="row">
-            <div class="col-9">
+            <div class="col-12 col-md-8">
                 <div class="row crystals">
-                    <div class="col-6">
-                        <img src="assets/images/blueCrystal.jpg" alt="Blue Crystal">
+                    <div class="col-3 col-md-6">
+                        <img id="blue" class="m-3" src="assets/images/blueCrystal.jpg" alt="Blue Crystal">
                     </div>
-                    <div class="col-6">
-                        <img src="assets/images/purpleCrystal.jpg" alt="Purple Crystal">
+                    <div class="col-3 col-md-6 pr-0">
+                        <img id="purple" class="my-3 ml-3" src="assets/images/purpleCrystal.jpg" alt="Purple Crystal">
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <img src="assets/images/titaniumCrystal.jpg" alt="Titanium Crystal">
+                    <div class="col-3 col-md-6">
+                        <img id="titanium" class="m-3" src="assets/images/titaniumCrystal.jpg" alt="Titanium Crystal">
                     </div>
-                    <div class="col-6">
-                        <img src="assets/images/greenCrystal.jpg" alt="Green Crystal">
+                    <div class="col-3 col-md-6 pr-0">
+                        <img id="green" class="my-3 ml-3" src="assets/images/greenCrystal.jpg" alt="Green Crystal">
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="row">
-                    <div class="col">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magni quod a nam maxime odio quis vel optio! Unde, veritatis vero! Rerum voluptatum adipisci dolor veritatis voluptates fugit hic sit.</p>
+            <div class="col-4 records text-white pl-0">
+                <div class="row" id="instructions">
+                    <div class="col bg-secondary">
+                        <p class="my-3 mr-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid magni quod a nam maxime odio quis vel optio! Unde, veritatis vero! Rerum voluptatum adipisci dolor veritatis voluptates fugit hic sit.</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6">
-                        <p id="match">Score to Match: </p>
+                    <div class="col-6 bg-secondary mt-2">
+                        <p class="my-3 mr-3" id="scoreToMatch">Score to Match: </p>
+                        <p id="match"></p>
                     </div>
-                    <div class="col-6">
-                        <p id="win">Wins: </p>
-                        <p id="loss">Losses: </p>
+                    <div class="col-6 bg-secondary mt-2">
+                        <p class="m-3 wins">Wins: <span id="win">0</span></p>
+                        <p class="m-3 losses">Losses: <span id="loss">0</span></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row score">
+        <div class="d-flex justify-content-center" id="winner"></div>
+        <div class="d-flex justify-content-center" id="loser"></div>
+        <div class="playAgain d-flex justify-content-center"></div>
+        <div class="row score d-flex justify-content-center">
             <p>Total Score: </p>
             <p id="total">0</p>
         </div>
