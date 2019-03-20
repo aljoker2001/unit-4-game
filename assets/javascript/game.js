@@ -14,9 +14,13 @@ var loseSound = document.getElementById("loseSound");
 
 const randomNumbers = () => {
     blue = Math.floor(Math.random() * Math.floor(12)) + 1;
+    $("#blue").attr("value", blue);
     purple = Math.floor(Math.random() * Math.floor(12)) + 1;
+    $("#purple").attr("value", purple);
     titanium = Math.floor(Math.random() * Math.floor(12)) + 1;
+    $("#titanium").attr("value", titanium);
     green = Math.floor(Math.random() * Math.floor(12)) + 1;
+    $("#green").attr("value", green);
     match = Math.floor(Math.random() * Math.floor(102)) + 19;
     $("#match").text(match);
     $("#total").css("color", "white");
@@ -50,33 +54,12 @@ const winOrLose = () => {
 
 randomNumbers();
 
-$("#blue").on("click", function() {
-    total += blue;
+$(".crystal").on("click", function () {
+    total += parseInt($(this).attr("value"));
     $("#total").text(total);
     crystal.play();
     winOrLose();
-});
-
-$("#purple").on("click", function() {
-    total += purple;
-    $("#total").text(total);
-    crystal.play();
-    winOrLose();
-});
-
-$("#titanium").on("click", function() {
-    total += titanium;
-    $("#total").text(total);
-    crystal.play();
-    winOrLose();
-});
-
-$("#green").on("click", function() {
-    total += green;
-    $("#total").text(total);
-    crystal.play();
-    winOrLose();
-});
+})
 
 $(".playAgain").on("click", function() {
     randomNumbers()
