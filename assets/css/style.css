@@ -14,6 +14,12 @@ img {
     transition: all .5s;
 }
 
+img::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
 img:hover {
     transform: scale(1.1);
 }
@@ -76,6 +82,14 @@ p {
     font-size: 20px;
 }
 
+#win {
+    color: green;
+}
+
+#loss {
+    color: red;
+}
+
 #match {
     font-size: 36px;
 }
@@ -120,5 +134,8 @@ p {
 }
 
 @media screen and (max-width: 640px) {
-
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
