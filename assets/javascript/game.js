@@ -1,8 +1,8 @@
 var crystals = [
-    {color: "blue", value: 0},
-    {color: "purple", value: 0},
-    {color: "titanium", value: 0},
-    {color: "green", value: 0}
+    { color: "blue", value: 0 },
+    { color: "purple", value: 0 },
+    { color: "titanium", value: 0 },
+    { color: "green", value: 0 }
 ];
 var match = 0;
 var total = 0;
@@ -12,15 +12,16 @@ var button = $("<button>");
 var crystal = document.getElementById("sound");
 var winSound = document.getElementById("winSound");
 var loseSound = document.getElementById("loseSound");
+var gameOver = false;
 
 // Sets values for the number to reach and the value of each crystal
 const randomNumbers = () => {
     crystals.forEach((crystal) => {
-        crystal.value = Math.floor(Math.random() * Math.floor(12)) + 1;
+        crystal.value = Math.floor(Math.random() * 12) + 1;
         $("#" + crystal.color).attr("value", crystal.value);
         console.log(crystal.value);
     })
-    match = Math.floor(Math.random() * Math.floor(102)) + 19;
+    match = Math.floor(Math.random() * 102) + 19;
     $("#match").text(match);
     $("#total").css("color", "white");
     total = 0;
@@ -40,6 +41,7 @@ const winOrLose = () => {
         losses += 1;
         $("#loss").text(losses);
         loseSound.play();
+        gameOver = true;
     } else if (total === match) {
         button = $("<button>");
         $("#winner").text("You Win!");
@@ -49,6 +51,7 @@ const winOrLose = () => {
         wins += 1;
         $("#win").text(wins);
         winSound.play();
+        gameOver = true;
     }
 }
 
@@ -57,16 +60,19 @@ randomNumbers();
 
 // adds the value of the clicked crystal to the total and executes winOrLose if the click is a winner or a loser
 $(".crystal").on("click", function () {
-    total += parseInt($(this).attr("value"));
-    $("#total").text(total);
-    crystal.play();
-    winOrLose();
+    if (!gameOver) {
+        total += parseInt($(this).attr("value"));
+        $("#total").text(total);
+        crystal.play();
+        winOrLose();
+    }
 })
 
 // Clicking the playAgain button resets the game so you can play again
-$(".playAgain").on("click", function() {
+$(".playAgain").on("click", function () {
     randomNumbers()
     $(".playButton").remove();
     $("#winner").empty();
     $("#loser").empty();
+    gameOver = false;
 })
