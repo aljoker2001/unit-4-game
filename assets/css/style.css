@@ -53,7 +53,6 @@ p {
     width: 100%;
 }
 
-
 .crystals {
 
 }
@@ -107,6 +106,12 @@ p {
 
 #loser {
     color: red;
+}
+
+@media screen and (max-width: 1200px) {   
+    .container {
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 980px) {
